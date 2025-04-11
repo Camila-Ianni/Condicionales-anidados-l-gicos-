@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Ejercicio1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese la categoría (A, B, C, D, E): ");
+        String categoria = sc.next().toUpperCase();
+        System.out.print("Ingrese el sueldo actual: ");
+        double sueldo = sc.nextDouble();
+
+        double aumento = 0;
+
+        if (categoria.equals("A") || categoria.equals("C")) {
+            aumento = sueldo * 0.15;
+        } else if (categoria.equals("B") || categoria.equals("D")) {
+            aumento = sueldo * 0.10;
+        } else if (categoria.equals("E")) {
+            aumento = sueldo * 0.05;
+        } else {
+            System.out.println("Categoría inválida");
+            return;
+        }
+
+        System.out.println("Aumento: $" + aumento);
+        System.out.println("Sueldo final: $" + (sueldo + aumento));
+    }
+}
