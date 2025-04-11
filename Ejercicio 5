@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Ejercicio5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese los lados del triángulo: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        int mayor = Math.max(a, Math.max(b, c));
+        int sumaMenores = a + b + c - mayor;
+
+        if (sumaMenores > mayor) {
+            if (a == b && b == c) {
+                System.out.println("Es un triángulo equilátero.");
+            } else if (a == b || a == c || b == c) {
+                System.out.println("Es un triángulo isósceles.");
+            } else {
+                System.out.println("Es un triángulo escaleno.");
+            }
+        } else {
+            System.out.println("No se puede formar un triángulo.");
+        }
+    }
+}
