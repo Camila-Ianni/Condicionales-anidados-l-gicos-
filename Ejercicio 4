@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Ejercicio4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese los lados del triángulo: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        if (a == b && b == c) {
+            System.out.println("Es un triángulo equilátero.");
+        } else if (a == b || a == c || b == c) {
+            System.out.println("Es un triángulo isósceles.");
+        } else {
+            System.out.println("Es un triángulo escaleno.");
+        }
+    }
+}
